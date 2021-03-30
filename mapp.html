@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+    <TITLE>Image Mapping</TITLE>
+    <link rel="icon" type="image/png" href="assets/mi.png">
+    <style type="text/css">
+        img{
+            margin: 30px;
+        }
+        p{
+            padding-top: 5px;
+            padding-left: 50px;
+            font-size: 25px;
+        }
+    </style>
+</HEAD>
+<BODY> 
+    <p> Exaple of image mapping.</p>
+    <img src="img/socialmap.jpg"   alt="image map example" width=500 height=332 usemap="#map">
+    <div id="maparea">
+    <map name="map">        
+        <area href="https://facebook.com" alt="Facebook" target="_blank" shape=poly coords="30,100, 140,50, 290,220, 180,280"> 
+        <area href="https://en.wikipedia.org/wiki/Social_media" target="_blank" alt="Wikipedia Social Media Article" shape=poly        coords="190,75, 200,60, 495,60, 495,165, 275,165">     
+    </map>
+    </div>
+</HTML>

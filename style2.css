@@ -1,0 +1,27 @@
+table,tr,th{
+        border: 1px solid black;
+        border-collapse: collapse;
+}
+
+.d1{
+    margin: 20px;
+}
+
+.t1{
+    width: 50%;
+    height: 200px;
+}
+
+.h:hover{
+	color:white;
+	background-color:#040926;
+} 
+
+.l1:hover{
+	color:white;
+	background-color:#040926;
+}  
+
+.v{
+	color: red;
+}     

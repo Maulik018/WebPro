@@ -1,0 +1,193 @@
+<html>
+<head><title>DICE ROLLING</title>
+    <link rel="icon" href="img/dice.png">
+    <style>
+        #AIT1{
+    color:black;
+    width:120px;
+    height:120px;
+    position:absolute;
+    transform: translateX(19px) translateY(15px);
+  }
+#AIT{
+  color:black;
+  position:absolute;
+  transform: translateX(188px) translateY(40px);
+  width:1292px;
+  height:58px;
+}
+.r1{
+  transform: translateY(145px);
+}
+        #myImage
+        {
+            width:205px;
+            position: absolute;
+            margin-top: 300px;
+            padding-left: 520px;
+
+        }
+         #myImage2
+        {
+            width:205px;
+            position: absolute;
+            margin-top: 300px;
+            padding-left: 750px;
+        }
+        h1
+        {
+            position: absolute;
+            margin-top: 150px;
+            padding-left: 630px;
+            color: #05386B;
+            font-size: 45px;
+        }
+        
+        h2
+        {
+            position: absolute;
+            margin-top: 230px;
+            padding-left: 630px;
+            color: #EDF5E1;
+        }
+        
+       body
+        {
+            background-color: #5CDB95
+        }
+        input
+        {
+            border: 3px solid black;
+            transform:translateX(680px) translateY(520px);
+            width: 100px;
+        }
+        
+        input:hover{
+            background-color: black;
+            color:white;
+        }
+        .footer{
+            font-size: 20px;
+            text-align: center;
+            transform: translateY(600px);
+            color: white;
+        } 
+    </style>
+<BODY>
+    <SCRIPT>
+        var v1=0,v2=0;
+        var t1=0, t2=0;
+        var w1=0, w2=0, d=0,t=0;
+        function calling()
+        {t=t+1;
+           
+            v1=(Math.floor(Math.random()*6)+1);
+            rolling(v1);
+            v2=(Math.floor(Math.random()*6)+1);
+            rolling2(v2);
+            ans(v1,v2);
+            result(v1,v2);
+        }
+       
+        
+        function rolling(n)
+        { 
+            var pic
+            if(n==1)
+            pic="img/1.png";
+            
+            else if(n==2)
+            pic="img/2.png"
+            
+            else if(n==3)
+            pic="img/3.png"
+            
+            else if(n==4)
+            pic="img/4.png"
+            
+            else if(n==5)
+            pic="img/5.png"
+            
+            else
+            pic ="img/6.png"
+            
+            document.getElementById('myImage').src = pic;
+        }
+        function rolling2(n)
+        { 
+            var pic
+            if(n==1)
+            pic="img/1.png";
+            
+            else if(n==2)
+            pic="img/2.png"
+            
+            else if(n==3)
+            pic="img/3.png"
+            
+            else if(n==4)
+            pic="img/4.png"
+
+            else if(n==5)
+            pic="img/5.png"
+            
+            else
+            pic ="img/6.png"
+            
+            document.getElementById('myImage2').src = pic;
+        }
+        
+        function ans(v1,v2)
+        {
+            if(v1>v2)
+                { w1=w1+1;
+                document.getElementById("text").innerHTML="PLAYER 1 IS WINNER";
+                }
+            else if(v1==v2)
+                {d=d+1;
+                document.getElementById("text").innerHTML="&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ITS A DRAW";
+                }
+                
+            else
+                {
+                w2=w2+1;
+                document.getElementById("text").innerHTML="PLAYER 2 IS WINNER";
+                }
+               
+        }
+        
+        function result(v1,v2)
+        {
+         t1=t1+v1;
+         t2=t2+v2;
+            
+            document.getElementById("team_1").innerHTML=t1;
+            document.getElementById("team_1w").innerHTML=w1;
+        
+        
+            document.getElementById("team_2").innerHTML=t2;
+            document.getElementById("team_2w").innerHTML=w2;
+            
+            document.getElementById("total_score").innerHTML=t;
+            document.getElementById("draw_score").innerHTML=d;
+        
+        }
+    </SCRIPT>
+
+    <header class="hd">
+    <img id="AIT1" src="img/ait1.png"> <img id="AIT" src="img/AIT.png">
+  </header>
+<hr class="r1">
+    <p align="cenetr"><h1 class="main_head">DICE GAME</h1></p>
+    <p align="center"><h2 id="text">LETS START ROLLING</h2></p>
+    
+    <img id="myImage"   src="img/1.png" />
+    <img id="myImage2" src="img/1.png" />
+    <input class="button" type="button" value="ROLL" onclick="calling()" >
+
+<div class="footer">
+            <p>COPYRIGHT ©2021 ALL RIGHTS RESERVED BY AHMEDABAD INSTITUTE OF TECHNOLOGY</p>
+          </div>
+    </BODY>    
+</head>
+</hrml>

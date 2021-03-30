@@ -1,0 +1,38 @@
+/* unvisited link */
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: yellow;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+
+/*divison*/
+div {
+  background-color: green;
+  color: white;
+  padding: 25px;
+  text-align: center;
+}
+
+/* mouse over div*/
+div:hover {
+  background-color: lightblue;
+}
+
+/*para*/
+p::first-letter {
+  color: #ff0000;
+  font-size: xx-large;
+}

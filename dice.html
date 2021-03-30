@@ -1,0 +1,49 @@
+<html>
+<head>
+	<title>AIT || Dice Game</title>
+    <link rel="stylesheet" href="dice.css">
+</head>
+<body>
+	<script type="text/javascript">
+		function myFunction()
+{
+    const rno1=Math.floor(Math.random()*6)+1;
+    // console.log(rno1);
+    const rimageone='img/'+rno1+'.png';
+    // console.log(rimageone);
+    document.querySelectorAll('img')[1].setAttribute('src',rimageone);
+    const rno2=Math.floor(Math.random()*6)+1;
+    const rimagetwo='img/'+rno2+'.png';
+    document.querySelectorAll('img')[2].setAttribute('src',rimagetwo);
+
+        if(rno1>rno2)
+        {
+            document.querySelector("h2").innerHTML="Player 1 is Win!!!";
+        }
+        else if(rno2>rno1)
+        {
+            document.querySelector("h2").innerHTML="Player 2 is Win!!!";
+        }
+        else
+        {
+            document.querySelector("h2").innerHTML=" It's Draw";
+        }
+}
+
+	</script>
+	<div class="dice-area">
+        <p>Player 1</p>
+        <img  src="img/1.png"/>
+    </div>
+    <div class="dice-area">
+        <p>Player 2</p>
+        <img src="img/2.png" />
+    </div>
+    <div class="wrap">
+        <h2></h2>
+    </div>
+    <div class="regbtn">
+        <button type="button" onclick="myFunction()">Play Again</button>
+    </div>
+</body>
+</html>
